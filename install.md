@@ -19,7 +19,6 @@ $ sudo npm remove –g grunt-cli
 $ sudo npm remove –g bower
 $ sudo npm remove –g generator-angular@0.9.8
 $ sudo npm remove -g yo
-$ sudo npm remove -g yo
 
 $ sudo npm install –g grunt-cli
 $ sudo npm install –g bower
