@@ -8,6 +8,13 @@ sudo apt install nodejs-legacy
 ```
 ## Check installation status
 ```
+https://nodejs.org/en/download/package-manager/
+
+$ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+$ sudo apt-get install -y nodejs
+$ sudo npm install -g grunt
+
+
 $ node -v
 v4.2.6
 $ npm -v
@@ -25,6 +32,16 @@ $ sudo npm install –g bower
 $ sudo npm install –g generator-angular@0.9.8
 $ sudo npm install -g yo
 $ sudo npm install -g karma
+
+$ sudo npm update -g npm
+$ sudo yo angular --StockDog
+
+
+```
+## Update generator
+```
+@ sudo yo 
+  >> Update generator
 ```
 ## Scaffolding StockDog
 ```
