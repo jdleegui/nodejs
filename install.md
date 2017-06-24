@@ -1,4 +1,14 @@
 # install nodejs to launch angularjs
+## Related reference site
+```
+https://gruntjs.com/project-scaffolding
+https://www.npmjs.com/package/grunt-serve
+https://nodejs.org/en/download/package-manager/
+https://www.npmjs.com/package/angular
+https://nodejs.org/en/
+http://yeoman.io/learning/
+
+```
 ## Download nodejs
 ```
 sudo apt-get update
@@ -8,12 +18,6 @@ sudo apt install nodejs-legacy
 ```
 ## Check installation status
 ```
-https://gruntjs.com/project-scaffolding
-https://www.npmjs.com/package/grunt-serve
-https://nodejs.org/en/download/package-manager/
-https://www.npmjs.com/package/angular
-https://nodejs.org/en/
-
 $ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
 $ sudo npm install -g grunt
@@ -48,6 +52,7 @@ $ sudo yo angular --StockDog
 ```
 ## Update generator
 ```
+@sudo yo doctor
 @ sudo yo 
   >> Update generator
 ```
