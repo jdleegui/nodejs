@@ -13,4 +13,9 @@ v4.2.6
 $ npm -v
 3.5.2
 ```
-
+## Install Grunt, Bower
+```
+$ npm install –g grunt-cli
+$ npm install –g bower
+$ npm install –g generator-angular@0.9.8
+```
