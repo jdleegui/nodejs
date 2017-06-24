@@ -21,6 +21,7 @@ sudo npm remove -g grunt-serve
 sudo apt-get update
 sudo apt-get remove npm
 sudo apt-get remove nodejs
+sudo rmdir -R /usr
 ```
 ## Force installation of nodejs with latest version
 ```
