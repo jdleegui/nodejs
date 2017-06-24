@@ -7,7 +7,7 @@ https://nodejs.org/en/download/package-manager/
 https://www.npmjs.com/package/angular
 https://nodejs.org/en/
 http://yeoman.io/learning/
-
+http://yeoman.io/codelab/setup.html
 ```
 ## Download nodejs
 ```
@@ -15,6 +15,7 @@ sudo apt-get update
 sudo apt-get install nodejs
 sudo apt-get install npm
 sudo apt install nodejs-legacy
+
 ```
 ## Check installation status
 ```
@@ -23,13 +24,11 @@ $ sudo apt-get install -y nodejs
 $ sudo npm install -g grunt
 $ sudo npm install -g grunt-serve
 $ sudo npm install -g grunt-init
+$ sudo npm install -g npm@latest
 
-
-
-$ node -v
-v4.2.6
-$ npm -v
-3.5.2
+$ node --version && npm --version
+v8.1.2
+5.0.3
 ```
 ## Install Grunt, Bower
 ```
@@ -44,10 +43,13 @@ $ sudo npm install –g generator-angular@0.9.8
 $ sudo npm install -g yo
 # $ sudo npm install -g karma
 $ sudo apt-get install -y build-essescial
+$ sudo npm install --global generator-fountain-webapp
 
 $ sudo npm update -g npm
 $ sudo yo angular --StockDog
 
+$ yo --version
+2.0.0
 
 ```
 ## Update generator
