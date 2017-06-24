@@ -9,40 +9,52 @@ https://nodejs.org/en/
 http://yeoman.io/learning/
 http://yeoman.io/codelab/setup.html
 ```
-## Download nodejs
+## Remove previously installed stuff
+```
+sudo npm remove -g yo
+sudo npm remove -g generator-angular
+sudo npm remove -g bower
+sudo npm remove -g grunt-cli
+sudo npm remove -g grunt
+sudo npm remove -g grunt-serve
+
+sudo apt-get update
+sudo apt-get remove npm
+sudo apt-get remove nodejs
+```
+## Force installation of nodejs with latest version
+```
+#curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+#sudo apt-get install -y nodejs
+```
+## Reinstall nodejs component
 ```
 sudo apt-get update
 sudo apt-get install nodejs
 sudo apt-get install npm
-sudo apt install nodejs-legacy
+sudo apt-get install -y build-essescial
 
-```
-## Check installation status
-```
-$ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-$ sudo apt-get install -y nodejs
-$ sudo npm install -g grunt
-$ sudo npm install -g grunt-serve
-$ sudo npm install -g grunt-init
-$ sudo npm install -g npm@latest
-
-$ node --version && npm --version
+node --version && npm --version
 v8.1.2
 5.0.3
 ```
+## Install NPM package
+```
+sudo npm install --global grunt
+sudo npm install --global grunt-serve
+sudo npm install --global grunt-cli
+sudo npm install --global grunt-init
+sudo npm install --global bower
+sudo npm install --global generator-angular
+sudo npm install --global yo
+sudo npm install --global karma
+```
+## Check installation status
+```
+```
 ## Install Grunt, Bower
 ```
-$ sudo npm remove –g grunt-cli
-$ sudo npm remove –g bower
-$ sudo npm remove –g generator-angular@0.9.8
-$ sudo npm remove -g yo
 
-$ sudo npm install –g grunt-cli
-$ sudo npm install –g bower
-$ sudo npm install –g generator-angular@0.9.8
-$ sudo npm install -g yo
-# $ sudo npm install -g karma
-$ sudo apt-get install -y build-essescial
 $ sudo npm install --global generator-fountain-webapp
 
 $ sudo npm update -g npm
