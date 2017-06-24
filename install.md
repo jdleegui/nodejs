@@ -18,4 +18,7 @@ $ npm -v
 $ npm install –g grunt-cli
 $ npm install –g bower
 $ npm install –g generator-angular@0.9.8
+
+$ npm remove -g yo
+$ npm install -g yo
 ```
