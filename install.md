@@ -12,6 +12,8 @@ http://yeoman.io/codelab/setup.html
 ## Remove previously installed stuff
 ```
 sudo npm remove -g yo
+sudo npm remove -g karma
+sudo npm remove -g generator-karma
 sudo npm remove -g generator-angular
 sudo npm remove -g bower
 sudo npm remove -g grunt-cli
@@ -49,6 +51,7 @@ sudo npm install --global bower
 sudo npm install --global generator-angular
 sudo npm install --global yo
 sudo npm install --global karma
+sudo npm install --global generator-karma
 ```
 ## Run yo and select 'Install a generator' and input 'angular'
 ```
