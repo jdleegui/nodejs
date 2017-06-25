@@ -30,17 +30,6 @@ sudo rmdir -R /usr/lib/node-module/
 #curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 #sudo apt-get install -y nodejs
 ```
-## Reinstall nodejs component
-```
-sudo apt-get update
-sudo apt-get install nodejs
-sudo apt-get install npm
-sudo apt-get install -y build-essescial
-
-node --version && npm --version
-v8.1.2
-5.0.3
-```
 ## Install NPM package
 ```
 sudo npm install --global grunt
@@ -53,9 +42,20 @@ sudo npm install --global yo
 sudo npm install --global karma
 sudo npm install --global generator-karma
 ```
+## Reinstall nodejs component
+```
+sudo apt-get update
+sudo apt-get install nodejs
+sudo apt-get install npm
+sudo apt-get install -y build-essescial
+
+node --version && npm --version
+v8.1.2
+5.0.3
+```
 ## Run yo and select 'Install a generator' and input 'angular'
 ```
-$ sudo yo
+$ sudo yo stockdog
 ? 'Allo jdlee! What would you like to do? Install a generator
 ? Search npm for generators: angular
 ? Here's what I found. Official generator → angular
