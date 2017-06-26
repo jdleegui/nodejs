@@ -53,49 +53,17 @@ node --version && npm --version
 v8.1.2
 5.0.3
 ```
-## Run yo and select 'Install a generator' and input 'angular'
-```
-$ sudo yo stockdog
-? 'Allo jdlee! What would you like to do? Install a generator
-? Search npm for generators: angular
-? Here's what I found. Official generator → angular
-  Install one? (Use arrow keys)
-❯ angular ෴  Yeoman generator for AngularJS 
-  3m5-angular-1 * Install Yeoman (http://yeoman.io/)
-
- * `npm i -g generator-3m5-angular-1` 
-
- * `yo 3m5-angular-1` inside of an empty folder, it will create project structure and install dependencies
-
- * Start development server using `grunt dev` (currently only grunt opti 
-  540-angular Yeoman generator for 540 using Angular JS and Gulp 
-  a2lib A generator for angular 2 libraries with all the basic stuff setup to get you started quickly. Edit 
-  a3 ACUBED Main Generator : JohnPapa AngularJS Style Guide + Yeoman generator for creating MEAN stack applications, using Mongo
-DB, Express, AngularJS, and Node with generator-angular-fullstack v2.0.13 
-  aaal An crud interface generator for loopback and angular. 
-  abacus-fullstack Yeoman generator for creating MEAN stack applications, using MongoDB, Express, AngularJS, and Node and modifi
-ed generator-angular-fullstack 
-(Move up and down to reveal more choices)
-
-     _-----_     ╭───────────────────────╮
-    |       |    │      Bye from us!     │
-    |--(o)--|    │       Chat soon.      │
-   `---------´   │      Yeoman team      │
-    ( _´U`_ )    │    http://yeoman.io   │
-    /___A___\   /╰───────────────────────╯
-     |  ~  |     
-   __'.___.'__   
- ´   `  |° ´ Y ` 
-
-$ 
-
-```
 ## Create project
 ```
-mkdir StockDog && cd StockDog
+jdlee@LeeJD:~$ mkdir StkDog
+jdlee@LeeJD:~$ cd StkDog/
 ```
-## RUN yo in command line terminal. It will crete default YEOMAN project. Look created folder.
+## Run yo and select 'Install a generator' and input 'angular'
 ```
+jdlee@LeeJD:~/StkDog$ sudo yo 
+? 'Allo jdlee! What would you like to do? Angular
+
+Make sure you are in the directory you want to scaffold into.
 This generator can also be run with: yo angular
 
 
@@ -113,9 +81,10 @@ Out of the box I include Bootstrap and some AngularJS recommended modules.
 
 ? Would you like to use Gulp (experimental) instead of Grunt? No
 ? Would you like to use Sass (with Compass)? Yes
-? Would you like to include Bootstrap? No
-? Which modules would you like to include? angular-animate.js, angular-cookies.js, angular-resource.js, angular-route.js, angula
-r-sanitize.js, angular-touch.js
+? Would you like to include Bootstrap? Yes
+? Would you like to use the Sass version of Bootstrap? Yes
+? Which modules would you like to include? angular-animate.js, angular-aria.js, angular-cookies.js, angular-resource.js, angular-messages.js, angular-route.js, angular-sanitize.j
+s, angular-touch.js
    create app/styles/main.scss
    create app/index.html
    create bower.json
@@ -141,55 +110,101 @@ r-sanitize.js, angular-touch.js
    invoke   angular:controller:/usr/lib/node_modules/generator-angular/app/index.js
    create     app/scripts/controllers/main.js
    create     test/spec/controllers/main.js
-Error  
+   invoke   karma:app
 
-You don't seem to have a generator with the name “karma:app” installed.
-But help is on the way:
 
-tree StockDog/
-StockDog/
-├── app
-│   ├── 404.html
-│   ├── favicon.ico
-│   ├── images
-│   │   └── yeoman.png
-│   ├── index.html
-│   ├── robots.txt
-│   ├── scripts
-│   │   ├── app.js
-│   │   └── controllers
-│   │       └── main.js
-│   ├── styles
-│   │   └── main.scss
-│   └── views
-│       └── main.html
-├── bower.json
-├── Gruntfile.js
-├── package.json
-├── README.md
-└── test
-    └── spec
-        └── controllers
-            └── main.js
+I'm all done. Running bower install & npm install for you to install the required dependencies. If this fails, try running the command yourself.
 
-9 directories, 14 files
-jdlee@LeeJD:~$ 
+
+   invoke       angular:route
+   invoke           angular:controller:/usr/lib/node_modules/generator-angular/route/index.js
+   create             app/scripts/controllers/about.js
+   create             test/spec/controllers/about.js
+   invoke           angular:view:/usr/lib/node_modules/generator-angular/route/index.js
+   create             app/views/about.html
+   create     test/karma.conf.js
+ conflict     package.json
+bower angular#^1.4.0            ENOGIT git is not installed or not in the PATHal: verb npm-session b58ee77a3b8d7283
+grunt-cli: The grunt command line interface (v1.2.0)
+
+Fatal error: Unable to find local grunt.
+
+If you're seeing this message, grunt hasn't been installed locally to
+your project. For more information about installing and configuring grunt,
+please see the Getting Started guide:
+
+http://gruntjs.com/getting-started
+npm WARN deprecated minimatch@0.2.14: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated bower@1.8.0: ..psst! While Bower is maintained, we recommend Yarn and Webpack for *new* front-end projects! Yarn's advantage is security and reliability, and Webpack's is support for both CommonJS and AMD projects. Currently there's no migration path but we hope you'll help us figure out one.
+npm WARN deprecated minimatch@2.0.10: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated graceful-fs@1.2.3: graceful-fs v3.0.0 and before will fail on node releases >= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use 'npm ls graceful-fs' to find it in the tree.
+npm WARN deprecated bower@1.3.12: ..psst! While Bower is maintained, we recommend Yarn and Webpack for *new* front-end projects! Yarn's advantage is security and reliability, and Webpack's is support for both CommonJS and AMD projects. Currently there's no migration path but we hope you'll help us figure out one.
+npm WARN deprecated minimatch@0.3.0: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated graceful-fs@2.0.3: graceful-fs v3.0.0 and before will fail on node releases >= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use 'npm ls graceful-fs' to find it in the tree.
+npm WARN deprecated minimatch@1.0.0: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated node-uuid@1.4.8: Use uuid module instead
+npm WARN deprecated tough-cookie@0.12.1: ReDoS vulnerability parsing Set-Cookie https://nodesecurity.io/advisories/130
+npm WARN deprecated npmconf@2.1.2: this package has been reintegrated into npm and is now out of date with respect to npm
+npm WARN prefer global jshint@2.8.0 should be installed with -g
+
+> optipng-bin@3.1.4 postinstall /home/jdlee/StkDog/node_modules/optipng-bin
+> node lib/install.js
+
+  ✔ optipng pre-build test passed successfully
+
+> jpegtran-bin@3.2.0 postinstall /home/jdlee/StkDog/node_modules/jpegtran-bin
+> node lib/install.js
+
+  ✔ jpegtran pre-build test passed successfully
+
+> gifsicle@3.0.4 postinstall /home/jdlee/StkDog/node_modules/gifsicle
+> node lib/install.js
+
+  ✔ gifsicle pre-build test passed successfully
+npm notice created a lockfile as package-lock.json. You should commit this file.
+added 997 packages in 24.253s
+? Overwrite package.json? overwrite this and all others
+    force     package.json
+
+> phantomjs-prebuilt@2.1.14 install /home/jdlee/StkDog/node_modules/phantomjs-prebuilt
+> node install.js
+
+PhantomJS not found on PATH
+Download already available at /tmp/phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2
+Verified checksum of previously downloaded file
+Extracting tar contents (via spawned process)
+
+Removing /home/jdlee/StkDog/node_modules/phantomjs-prebuilt/lib/phantom
+Copying extracted folder /tmp/phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2-extract-1498465037090/phantomjs-2.1.1-linux-x86_64 -> /home/jdlee/StkDog/node_modules/phantomjs-prebuilt/lib/phantom
+Writing location.js file
+Done. Phantomjs binary available at /home/jdlee/StkDog/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs
+
+> fsevents@1.1.2 install /home/jdlee/StkDog/node_modules/fsevents
+> node install
+
++ karma-jasmine@1.1.0
++ karma@1.7.0
++ jasmine-core@2.6.4
++ karma-phantomjs-launcher@1.0.4
++ phantomjs-prebuilt@2.1.14
+added 302 packages in 16.605s
+
+     _-----_     ╭───────────────────────╮
+    |       |    │      Bye from us!     │
+    |--(o)--|    │       Chat soon.      │
+   `---------´   │      Yeoman team      │
+    ( _´U`_ )    │    http://yeoman.io   │
+    /___A___\   /╰───────────────────────╯
+     |  ~  |     
+   __'.___.'__   
+ ´   `  |° ´ Y ` 
+
+jdlee@LeeJD:~/StkDog$ 
 ```
+## RUN using grunt serve comand and check in localhost:9000
 ```
-sudo npm install --global karma
-
-$ sudo npm install --global generator-fountain-webapp
-
-$ sudo npm update -g npm
-$ sudo yo angular --StockDog
-
-$ yo --version
-2.0.0
-
-```
-## RUN grunt serve. RUN grunt server --force if it not work properly.
-```
-$ grunt serve 
+jdlee@LeeJD:~/StkDog$ 
+jdlee@LeeJD:~/StkDog$ grunt serve
 Running "serve" task
 
 Running "clean:server" (clean) task
@@ -201,15 +216,15 @@ Warning: Error: Cannot find where you keep your Bower packages. Use --force to c
 Aborted due to warnings.
 
 
-Execution Time (2017-06-26 15:16:44 UTC+9)
-loading tasks                106ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 58%
-serve                          2ms  ▇▇ 1%
-loading grunt-contrib-clean    5ms  ▇▇▇▇ 3%
+Execution Time (2017-06-26 17:17:30 UTC+9)
+loading tasks                109ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 58%
+serve                          3ms  ▇▇▇ 2%
+loading grunt-contrib-clean    4ms  ▇▇▇ 2%
 clean:server                   5ms  ▇▇▇▇ 3%
-wiredep:app                   63ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 35%
-Total 182ms
+wiredep:app                   65ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 35%
+Total 188ms
 
-jdlee@LeeJD:~/stockdog$ grunt serve --force
+jdlee@LeeJD:~/StkDog$ grunt serve --force
 Running "serve" task
 
 Running "clean:server" (clean) task
@@ -232,11 +247,11 @@ Running "concurrent:server" (concurrent) task
     Done, but with warnings.
     
     
-    Execution Time (2017-06-26 15:16:57 UTC+9)
-    loading tasks                  109ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 79%
-    loading grunt-contrib-compass   20ms  ▇▇▇▇▇ 14%
+    Execution Time (2017-06-26 17:17:36 UTC+9)
+    loading tasks                  108ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 79%
+    loading grunt-contrib-compass   20ms  ▇▇▇▇▇ 15%
     compass:server                   8ms  ▇▇ 6%
-    Total 138ms
+    Total 136ms
     
 Running "postcss:server" (postcss) task
 
@@ -245,88 +260,12 @@ Started connect web server on http://localhost:9000
 
 Running "watch" task
 Waiting...
-  
-```
-## Remove created file.
-```
-mv ~/stockdog/app/views/about.html ~/stockdog1/app/views/
-mv ~/stockdog/app/views/main.html ~/stockdog1/app/views/
-mv ~/stockdog/app/scripts/controllers ~/stockdog1/app/scripts/controllers/
-mv ~/stockdog/app/scripts/app.js ~/stockdog1/app/scripts/controllers/
-```
-## Change two .when() configurations
-```
-jdlee@LeeJD:~$ mkdir StockDog
-jdlee@LeeJD:~$ cd StockDog/
-jdlee@LeeJD:~/StockDog$ sudo yo
-? 'Allo jdlee! What would you like to do? Angular
+^C
 
-Make sure you are in the directory you want to scaffold into.
-This generator can also be run with: yo angular
+Execution Time (2017-06-26 17:17:36 UTC+9)
+loading tasks      111ms  ▇▇ 1%
+concurrent:server  343ms  ▇▇▇▇▇▇▇ 4%
+Total 7.8s
 
-
-     _-----_     
-    |       |    ╭──────────────────────────╮
-    |--(o)--|    │    Welcome to Yeoman,    │
-   `---------´   │   ladies and gentlemen!  │
-    ( _´U`_ )    ╰──────────────────────────╯
-    /___A___\   /
-     |  ~  |     
-   __'.___.'__   
- ´   `  |° ´ Y ` 
-
-Out of the box I include Bootstrap and some AngularJS recommended modules.
-
-? Would you like to use Gulp (experimental) instead of Grunt? No
-? Would you like to use Sass (with Compass)? No
-? Would you like to include Bootstrap? Yes
-? Which modules would you like to include? angular-animate.js, angular-aria.js, angular-cookies.js, angular-resource.js, angular-messages.js, angular-r
-lar-sanitize.js, angular-touch.js
-   create app/styles/main.css
-   create app/index.html
-   create bower.json
-   create .bowerrc
-   create package.json
-   create Gruntfile.js
-   create README.md
-   invoke   angular:common:/usr/lib/node_modules/generator-angular/app/index.js
-   create     .editorconfig
-   create     .gitattributes
-   create     .jscsrc
-   create     .jshintrc
-   create     .yo-rc.json
-   create     .gitignore
-   create     test/.jshintrc
-   create     app/404.html
-   create     app/favicon.ico
-   create     app/robots.txt
-   create     app/views/main.html
-   create     app/images/yeoman.png
-   invoke   angular:main:/usr/lib/node_modules/generator-angular/app/index.js
-   create     app/scripts/app.js
-   invoke   angular:controller:/usr/lib/node_modules/generator-angular/app/index.js
-   create     app/scripts/controllers/main.js
-   create     test/spec/controllers/main.js
-Error  
-
-You don't seem to have a generator with the name “karma:app” installed.
-But help is on the way:
-
-You can see available generators via npm search yeoman-generator or via http://yeoman.io/generators/. 
-Install them with npm install generator-karma:app.
-
-To see all your installed generators run yo without any arguments. Adding the --help option will also show subgenerators. 
-
-If yo cannot find the generator, run yo doctor to troubleshoot your system.
-
-     _-----_     ╭───────────────────────╮
-    |       |    │      Bye from us!     │
-    |--(o)--|    │       Chat soon.      │
-   `---------´   │      Yeoman team      │
-    ( _´U`_ )    │    http://yeoman.io   │
-    /___A___\   /╰───────────────────────╯
-     |  ~  |     
-   __'.___.'__   
- ´   `  |° ´ Y ` 
 
 ```
