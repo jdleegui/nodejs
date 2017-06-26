@@ -164,6 +164,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    
     'mgcrea.ngStrap'
   ])
   .config(function ($routeProvider) {
@@ -184,5 +185,34 @@ angular
         redirectTo: '/'
       });
   });
+jdlee@LeeJD:~$ 
+```
+## Check if 'ng-app' is inserted automatically.
+```
+jdlee@LeeJD:~$ head StkDog/app/index.html -n 20
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+```diff
++ this will be highlighted in green
+- this will be highlighted in red
+```  
+  <body ng-app="stkDogApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 jdlee@LeeJD:~$ 
 ```
