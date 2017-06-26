@@ -208,9 +208,11 @@ jdlee@LeeJD:~$ head StkDog/app/index.html -n 20
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
+  ```
   ```diff
-  + <body __ng-app="stkDogApp"__ >
-  - <body __ng-app="stkDogApp"__ >
+  + <body ng-app="stkDogApp">
+  - <body>
+  ```
   ```
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
