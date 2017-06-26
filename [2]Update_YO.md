@@ -227,3 +227,29 @@ jdlee@LeeJD:~$ head StkDog/app/index.html -n 20
     <![endif]-->
 jdlee@LeeJD:~$ 
 ```
+## Add watch list
+```
+jdlee@LeeJD:~/StkDog$ yo angular:service Watchlist-Service
+   create app/scripts/services/watchlist-service.js
+   create test/spec/services/watchlist-service.js
+jdlee@LeeJD:~/StkDog$ 
+```
+## Check if watchlist is included.
+```
+jdlee@LeeJD:~$ cat StkDog/app/index.html | grep 'watch'
+        <script src="scripts/services/watchlist-service.js"></script>
+jdlee@LeeJD:~$ 
+```
+## Install lodash
+```
+jdlee@LeeJD:~/StkDog$ bower install lodash --save
+bower lodash#*              not-cached https://github.com/lodash/lodash.git#*
+bower lodash#*                 resolve https://github.com/lodash/lodash.git#*
+bower lodash#*                download https://github.com/lodash/lodash/archive/4.17.4.tar.gz
+bower lodash#*                 extract archive.tar.gz
+bower lodash#*                resolved https://github.com/lodash/lodash.git#4.17.4
+bower lodash#^4.17.4           install lodash#4.17.4
+
+lodash#4.17.4 bower_components/lodash
+jdlee@LeeJD:~/StkDog$ 
+```
