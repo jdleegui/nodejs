@@ -94,7 +94,7 @@ $
 ```
 mkdir StockDog && cd StockDog
 ```
-## Rerun yo and crete default project. Look created folder.
+## RUN yo in command line terminal. It will crete default YEOMAN project. Look created folder.
 ```
 This generator can also be run with: yo angular
 
@@ -187,13 +187,64 @@ $ yo --version
 2.0.0
 
 ```
-## Update generator
+## RUN grunt serve. RUN grunt server --force if it not work properly.
 ```
-@sudo yo doctor
-@ sudo yo 
-  >> Update generator
+$ grunt serve 
+Running "serve" task
 
-npm install -g generator-angular-webapp
+Running "clean:server" (clean) task
+>> 0 paths cleaned.
+
+Running "wiredep:app" (wiredep) task
+Warning: Error: Cannot find where you keep your Bower packages. Use --force to continue.
+
+Aborted due to warnings.
+
+
+Execution Time (2017-06-26 15:16:44 UTC+9)
+loading tasks                106ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 58%
+serve                          2ms  ▇▇ 1%
+loading grunt-contrib-clean    5ms  ▇▇▇▇ 3%
+clean:server                   5ms  ▇▇▇▇ 3%
+wiredep:app                   63ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 35%
+Total 182ms
+
+jdlee@LeeJD:~/stockdog$ grunt serve --force
+Running "serve" task
+
+Running "clean:server" (clean) task
+>> 0 paths cleaned.
+
+Running "wiredep:app" (wiredep) task
+Warning: Error: Cannot find where you keep your Bower packages. Used --force, continuing.
+
+Running "wiredep:test" (wiredep) task
+Warning: Error: Cannot find where you keep your Bower packages. Used --force, continuing.
+
+Running "wiredep:sass" (wiredep) task
+Warning: Error: Cannot find where you keep your Bower packages. Used --force, continuing.
+
+Running "concurrent:server" (concurrent) task
+    
+    Running "compass:server" (compass) task
+    Warning: not found: compass Used --force, continuing.
+    
+    Done, but with warnings.
+    
+    
+    Execution Time (2017-06-26 15:16:57 UTC+9)
+    loading tasks                  109ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 79%
+    loading grunt-contrib-compass   20ms  ▇▇▇▇▇ 14%
+    compass:server                   8ms  ▇▇ 6%
+    Total 138ms
+    
+Running "postcss:server" (postcss) task
+
+Running "connect:livereload" (connect) task
+Started connect web server on http://localhost:9000
+
+Running "watch" task
+Waiting...
   
 ```
 ## Scaffolding StockDog
