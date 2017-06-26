@@ -164,25 +164,33 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    
-    'mgcrea.ngStrap'
+```
+```diff
+-    'ngTouch'
++   'ngTouch',
++    'mgcrea.ngStrap'
+```
+```
   ])
   .config(function ($routeProvider) {
     $routeProvider
     **
-/**
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-*/
-    **
+```
+```diff
+-/**
+-      .when('/', {
+-        templateUrl: 'views/main.html',
+-        controller: 'MainCtrl',
+-        controllerAs: 'main'
+-      })
+-      .when('/about', {
+-        templateUrl: 'views/about.html',
+-        controller: 'AboutCtrl',
+-        controllerAs: 'about'
+-      })
+-*/
+```
+```
       .otherwise({
         redirectTo: '/'
       });
