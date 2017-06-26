@@ -247,7 +247,14 @@ Running "watch" task
 Waiting...
   
 ```
-## Scaffolding StockDog
+## Remove created file.
+```
+mv ~/stockdog/app/views/about.html ~/stockdog1/app/views/
+mv ~/stockdog/app/views/main.html ~/stockdog1/app/views/
+mv ~/stockdog/app/scripts/controllers ~/stockdog1/app/scripts/controllers/
+mv ~/stockdog/app/scripts/app.js ~/stockdog1/app/scripts/controllers/
+```
+## Change two .when() configurations
 ```
 jdlee@LeeJD:~$ mkdir StockDog
 jdlee@LeeJD:~$ cd StockDog/
