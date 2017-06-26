@@ -136,3 +136,53 @@ jdlee@LeeJD:~$ cat StkDog/app/index.html
 </html>
 jdlee@LeeJD:~$ 
 ```
+## Install git client and angular-strap
+```
+jdlee@LeeJD:~/StkDog$ sudo apt-get install git
+jdlee@LeeJD:~/StkDog$ bower install angular-strap
+```
+## Insert 'mgcrea.ngStrap'
+```
+jdlee@LeeJD:~$ cat StkDog/app/scripts/app.js 
+'use strict';
+
+/**
+ * @ngdoc overview
+ * @name stkDogApp
+ * @description
+ * # stkDogApp
+ *
+ * Main module of the application.
+ */
+angular
+  .module('stkDogApp', [
+    'ngAnimate',
+    'ngAria',
+    'ngCookies',
+    'ngMessages',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch',
+    'mgcrea.ngStrap'
+  ])
+  .config(function ($routeProvider) {
+    $routeProvider
+/**
+      .when('/', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
+      })
+*/
+      .otherwise({
+        redirectTo: '/'
+      });
+  });
+jdlee@LeeJD:~$ 
+```
