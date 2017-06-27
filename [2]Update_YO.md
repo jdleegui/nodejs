@@ -279,42 +279,78 @@ jdlee@LeeJD:~/StockDog$ cat app/index.html
 </html>
 jdlee@LeeJD:~/StockDog$ 
 ```
-
-
 ## Install git client and angular-strap
 ```
-jdlee@LeeJD:~/StkDog$ sudo apt-get install git
-jdlee@LeeJD:~/StkDog$ bower install angular-strap
+jdlee@LeeJD:~/StockDog$ sudo apt-get install git
+jdlee@LeeJD:~/StockDog$ bower install angular-strap –save
+bower angular-strap#*           cached https://github.com/mgcrea/angular-strap.git#2.3.12
+bower angular-strap#*         validate 2.3.12 against https://github.com/mgcrea/angular-strap.git#*
+bower                        ENOTFOUND Package –save not found
 ```
 ## Insert 'mgcrea.ngStrap'
-```
-jdlee@LeeJD:~$ cat StkDog/app/scripts/app.js 
+```diff
+jdlee@LeeJD:~/StockDog$ cat app/scripts/app.js 
 'use strict';
 
 /**
  * @ngdoc overview
- * @name stkDogApp
+ * @name stockDogApp
  * @description
- * # stkDogApp
+ * # stockDogApp
  *
  * Main module of the application.
  */
 angular
-  .module('stkDogApp', [
+  .module('stockDogApp', [
     'ngAnimate',
-    'ngAria',
     'ngCookies',
-    'ngMessages',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+-   'ngTouch'
++   'ngTouch',
++   'mgcrea.ngStrap'
+   ])
+  .config(function ($routeProvider) {
+    $routeProvider
+     .otherwise({
+        redirectTo: '/'
+      });
+  });
+jdlee@LeeJD:~/StockDog$ vim app/scripts/app.js 
+```
+## Like this
+```
+jdlee@LeeJD:~/StockDog$ cat app/scripts/app.js 
+'use strict';
+
+/**
+ * @ngdoc overview
+ * @name stockDogApp
+ * @description
+ * # stockDogApp
+ *
+ * Main module of the application.
+ */
+angular
+  .module('stockDogApp', [
+    'ngAnimate',
+    'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'mgcrea.ngStrap'
+  ])
+  .config(function ($routeProvider) {
+    $routeProvider
+     .otherwise({
+        redirectTo: '/'
+      });
+  });
+jdlee@LeeJD:~/StockDog$ 
 ```
-```diff
--    'ngTouch'
-+   'ngTouch',
-+    'mgcrea.ngStrap'
-```
+## Insert 'mgcrea.ngStrap'
 ```
   ])
   .config(function ($routeProvider) {
