@@ -2,10 +2,15 @@
 
 ## Remove man.html,about.html
 ```
-jdlee@LeeJD:~$ mv StkDog/app/views/main.html ~/BakStkDog/app/views/
-jdlee@LeeJD:~$ mv StkDog/app/views/about.html ~/BakStkDog/app/views/
-jdlee@LeeJD:~$ mv StkDog/app/scripts/controllers/main.js ~/BakStkDog/app/scripts/controllers/
-jdlee@LeeJD:~$ mv StkDog/app/scripts/controllers/about.js ~/BakStkDog/app/scripts/controllers/
+jdlee@LeeJD:~/StockDog$ mkdir ~/BakStockDog
+jdlee@LeeJD:~/StockDog$ mkdir ~/BakStockDog/app
+jdlee@LeeJD:~/StockDog$ mkdir ~/BakStockDog/app/views
+jdlee@LeeJD:~/StockDog$ mv app/views/main.html ~/BakStockDog/app/views/
+jdlee@LeeJD:~/StockDog$ mv app/views/about.html ~/BakStockDog/app/views/
+jdlee@LeeJD:~/StockDog$ mkdir ~/BakStockDog/app/scripts/
+jdlee@LeeJD:~/StockDog$ mkdir ~/BakStockDog/app/scripts/controllers/
+jdlee@LeeJD:~/StockDog$ mv app/scripts/controllers/main.js ~/BakStockDog/app/scripts/controllers/
+jdlee@LeeJD:~/StockDog$ mv app/scripts/controllers/about.js ~/BakStockDog/app/scripts/controllers/
 
 ```
 ## Remove .when activator
