@@ -350,34 +350,6 @@ angular
   });
 jdlee@LeeJD:~/StockDog$ 
 ```
-## Insert 'mgcrea.ngStrap'
-```
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-    **
-```
-```diff
--/**
--      .when('/', {
--        templateUrl: 'views/main.html',
--        controller: 'MainCtrl',
--        controllerAs: 'main'
--      })
--      .when('/about', {
--        templateUrl: 'views/about.html',
--        controller: 'AboutCtrl',
--        controllerAs: 'about'
--      })
--*/
-```
-```
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
-jdlee@LeeJD:~$ 
-```
 ## Check if 'ng-app' is inserted automatically.
 ```
 jdlee@LeeJD:~$ head StkDog/app/index.html -n 20
@@ -410,16 +382,33 @@ jdlee@LeeJD:~$
 ```
 ## Add watch list
 ```
-jdlee@LeeJD:~/StkDog$ yo angular:service Watchlist-Service
+jdlee@LeeJD:~/StockDog$ yo angular:service Watchlist-Service
    create app/scripts/services/watchlist-service.js
    create test/spec/services/watchlist-service.js
-jdlee@LeeJD:~/StkDog$ 
+jdlee@LeeJD:~/StockDog$ 
 ```
 ## Check if watchlist is included.
-```
-jdlee@LeeJD:~$ cat StkDog/app/index.html | grep 'watch'
-        <script src="scripts/services/watchlist-service.js"></script>
-jdlee@LeeJD:~$ 
+```diff
+jdlee@LeeJD:~/StockDog$ ls app/scripts/services/watchlist-service.js 
+app/scripts/services/watchlist-service.js
+jdlee@LeeJD:~/StockDog$ cat app/scripts/services/watchlist-service.js 
+'use strict';
+
+/**
+ * @ngdoc service
+ * @name stockDogApp.WatchlistService
+ * @description
+ * # WatchlistService
+ * Service in the stockDogApp.
+ */
+angular.module('stockDogApp')
+  .service('WatchlistService', function () {
+    // AngularJS will instantiate a singleton by calling "new" on this function
+  });
+jdlee@LeeJD:~/StockDog$ 
+jdlee@LeeJD:~/StockDog$ grep "watchlist" app/index.html 
+       <script src="scripts/services/watchlist-service.js"></script>
+jdlee@LeeJD:~/StockDog$       
 ```
 ## Install lodash
 ```
@@ -436,88 +425,88 @@ jdlee@LeeJD:~/StkDog$
 ```
 ## Update lodash
 ```
-jdlee@LeeJD:~/StkDog$ bower install lodash --save
+jdlee@LeeJD:~/StockDog$ bower install lodash 
 bower lodash#*                  cached https://github.com/lodash/lodash.git#4.17.4
 bower lodash#*                validate 4.17.4 against https://github.com/lodash/lodash.git#*
+bower lodash#^4.17.4           install lodash#4.17.4
+
+lodash#4.17.4 bower_components/lodash
+jdlee@LeeJD:~/StockDog$ 
+
 ```
 ```diff
--jdlee@LeeJD:~/StkDog$ cat app/scripts/services/watchlist-service.js 
+jdlee@LeeJD:~/StockDog$ cat app/scripts/services/watchlist-service.js 
 -'use strict';
 -
 -/**
 - * @ngdoc service
-- * @name stkDogApp.WatchlistService
+- * @name stockDogApp.WatchlistService
 - * @description
 - * # WatchlistService
-- * Service in the stkDogApp.
+- * Service in the stockDogApp.
 - */
--angular.module('stkDogApp')
+-angular.module('stockDogApp')
 -  .service('WatchlistService', function () {
 -    // AngularJS will instantiate a singleton by calling "new" on this function
 -  });
-+jdlee@LeeJD:~/StkDog$ vim app/scripts/services/watchlist-service.js 
-+jdlee@LeeJD:~/StkDog$ cat app/scripts/services/watchlist-service.js 
+jdlee@LeeJD:~/StockDog$ vim app/scripts/services/watchlist-service.js 
+jdlee@LeeJD:~/StockDog$ cat app/scripts/services/watchlist-service.js 
 +'use strict';
 +
 +/**
 + * @ngdoc service
-+ * @name stkDogApp.WatchlistService
++ * @name stockDogApp.WatchlistService
 + * @description
 + * # WatchlistService
-+ * Service in the stkDogApp.
++ * Service in the stockDogApp.
 + */
-+angular.module('stkDogApp')
-+    .service('WatchlistService', function WatchlistService() {
++angular.module('stockDogApp')
++  .service('WatchlistService', function WatchlistService() {
 +    // [1] Helper: Load watchlists from localStorage
 +    var loadModel = function () {
-+        var model = {
-+            watchlists: localStorage['StockDog.watchlists'] ?
-+            JSON.parse(localStorage['StockDog.watchlists']) : [],
-+            nextId: localStorage['StockDog.nextId'] ?
-+            parseInt(localStorage['StockDog.nextId']) : 0
-+        };
-+    return model;
++      var model = {
++        watchlists: localStorage['StockDog.watchlists'] ?
++        JSON.parse(localStorage['StockDog.watchlists']) : [],
++        nextId: localStorage['StockDog.nextId'] ?
++        parseInt(localStorage['StockDog.nextId']) : 0
++      };
++      return model;
 +    };
-+
 +    // [2] Helper: Save watchlists to localStorage
 +    var saveModel = function () {
-+        localStorage['StockDog.watchlists'] = JSON.stringify(Model.watchlists);
-+        localStorage['StockDog.nextId'] = Model.nextId;
++      localStorage['StockDog.watchlists'] = JSON.stringify(Model.watchlists);
++      localStorage['StockDog.nextId'] = Model.nextId;
 +    };
-+
 +    // [3] Helper: Use lodash to find a watchlist with given ID
 +    var findById = function (listId) {
-+        return _.find(Model.watchlists, function (watchlist) {
-+            return watchlist.id === parseInt(listId);
-+        });
++      return _.find(Model.watchlists, function (watchlist) {
++        return watchlist.id === parseInt(listId);
++      });
 +    };
-+
 +    // [4] Return all watchlists or find by given ID
 +    this.query = function (listId) {
-+        if (listId) {
-+            return findById(listId);
-+        } else {
-+            return Model.watchlists;
-+        }
++      if (listId) {
++        return findById(listId);
++      } else {
++        return Model.watchlists;
++      }
 +    };
-+
 +    // [5] Save a new watchlist to watchlists model
 +    this.save = function (watchlist) {
-+        watchlist.id = Model.nextId++;
-+        Model.watchlists.push(watchlist);
-+        saveModel();
++      watchlist.id = Model.nextId++;
++      Model.watchlists.push(watchlist);
++      saveModel();
 +    };
-+
 +    // [6] Remove given watchlist from watchlists model
 +    this.remove = function (watchlist) {
-+        _.remove(Model.watchlists, function (list) {
-+            return list.id === watchlist.id;
-+        });
-+        saveModel();
++      _.remove(Model.watchlists, function (list) {
++        return list.id === watchlist.id;
++      });
++      saveModel();
 +    };
-+
 +    // [7] Initialize Model for this singleton service
 +    var Model = loadModel();
-+    });
-+jdlee@LeeJD:~/StkDog$ 
++  });
+jdlee@LeeJD:~/StockDog$ 
+
 ```
