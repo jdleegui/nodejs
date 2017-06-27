@@ -59,14 +59,8 @@ jdlee@LeeJD:~$ mkdir StkDog
 jdlee@LeeJD:~$ cd StkDog/
 ```
 ## Run yo and select 'Install a generator' and input 'angular'
-```diff
--jdlee@LeeJD:~/StkDog$ sudo yo 
-+jdlee@LeeJD:~/StkDog$ sudo yo angular StkDog
-? 'Allo jdlee! What would you like to do? Angular
-
-Make sure you are in the directory you want to scaffold into.
-This generator can also be run with: yo angular
-
+```
+jdlee@LeeJD:~/StockDog$ sudo yo angular StockDog
 
      _-----_     
     |       |    ╭──────────────────────────╮
@@ -81,12 +75,10 @@ This generator can also be run with: yo angular
 Out of the box I include Bootstrap and some AngularJS recommended modules.
 
 ? Would you like to use Gulp (experimental) instead of Grunt? No
-? Would you like to use Sass (with Compass)? Yes
+? Would you like to use Sass (with Compass)? No
 ? Would you like to include Bootstrap? Yes
-? Would you like to use the Sass version of Bootstrap? Yes
-? Which modules would you like to include? angular-animate.js, angular-aria.js, angular-cookies.js, angular-resource.js, angular-messages.js, angular-route.js, angular-sanitize.j
-s, angular-touch.js
-   create app/styles/main.scss
+? Which modules would you like to include? angular-animate.js, angular-cookies.js, angular-resource.js, angular-route.js, angular-sanitize.js, angular-touch.js
+   create app/styles/main.css
    create app/index.html
    create bower.json
    create .bowerrc
@@ -125,82 +117,147 @@ I'm all done. Running bower install & npm install for you to install the require
    create             app/views/about.html
    create     test/karma.conf.js
  conflict     package.json
-bower angular#^1.4.0            ENOGIT git is not installed or not in the PATHal: verb npm-session b58ee77a3b8d7283
-grunt-cli: The grunt command line interface (v1.2.0)
-
-Fatal error: Unable to find local grunt.
-
-If you're seeing this message, grunt hasn't been installed locally to
-your project. For more information about installing and configuring grunt,
-please see the Getting Started guide:
-
-http://gruntjs.com/getting-started
+bower bootstrap#^3.2.0      not-cached https://github.com/twbs/bootstrap.git#^3.2.0 script for preinstall, continuing
+bower bootstrap#^3.2.0         resolve https://github.com/twbs/bootstrap.git#^3.2.0
+bower angular-resource#^1.4.0   cached https://github.com/angular/bower-angular-resource.git#1.6.4
+bower angular-resource#^1.4.0 validate 1.6.4 against https://github.com/angular/bower-angular-resource.git#^1.4.0
+bower angular#^1.4.0            cached https://github.com/angular/bower-angular.git#1.6.4
+bower angular#^1.4.0          validate 1.6.4 against https://github.com/angular/bower-angular.git#^1.4.0
+bower angular-cookies#^1.4.0    cached https://github.com/angular/bower-angular-cookies.git#1.6.4
+bower angular-cookies#^1.4.0  validate 1.6.4 against https://github.com/angular/bower-angular-cookies.git#^1.4.0
+bower angular-animate#^1.4.0    cached https://github.com/angular/bower-angular-animate.git#1.6.4
+bower angular-animate#^1.4.0  validate 1.6.4 against https://github.com/angular/bower-angular-animate.git#^1.4.0
+bower angular-sanitize#^1.4.0   cached https://github.com/angular/bower-angular-sanitize.git#1.6.4
+bower angular-sanitize#^1.4.0 validate 1.6.4 against https://github.com/angular/bower-angular-sanitize.git#^1.4.0
+bower angular-route#^1.4.0      cached https://github.com/angular/bower-angular-route.git#1.6.4
+bower angular-route#^1.4.0    validate 1.6.4 against https://github.com/angular/bower-angular-route.git#^1.4.0
+bower angular-touch#^1.4.0      cached https://github.com/angular/bower-angular-touch.git#1.6.4
+bower angular-touch#^1.4.0    validate 1.6.4 against https://github.com/angular/bower-angular-touch.git#^1.4.0
+bower angular-mocks#^1.4.0      cached https://github.com/angular/bower-angular-mocks.git#1.6.4
+bower angular-mocks#^1.4.0    validate 1.6.4 against https://github.com/angular/bower-angular-mocks.git#^1.4.0
 npm WARN deprecated minimatch@0.2.14: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+bower bootstrap#^3.2.0        download https://github.com/twbs/bootstrap/archive/v3.3.7.tar.gzfetched in 367ms
 npm WARN deprecated bower@1.8.0: ..psst! While Bower is maintained, we recommend Yarn and Webpack for *new* front-end projects! Yarn's advantage is security and reliability, and Webpack's is support for both CommonJS and AMD projects. Currently there's no migration path but we hope you'll help us figure out one.
 npm WARN deprecated minimatch@2.0.10: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
 npm WARN deprecated graceful-fs@1.2.3: graceful-fs v3.0.0 and before will fail on node releases >= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use 'npm ls graceful-fs' to find it in the tree.
 npm WARN deprecated bower@1.3.12: ..psst! While Bower is maintained, we recommend Yarn and Webpack for *new* front-end projects! Yarn's advantage is security and reliability, and Webpack's is support for both CommonJS and AMD projects. Currently there's no migration path but we hope you'll help us figure out one.
+bower bootstrap#^3.2.0         extract archive.tar.gzge manifest for lower-case-first@^1.0.0 fetched in 170ms
 npm WARN deprecated minimatch@0.3.0: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+bower bootstrap#^3.2.0        resolved https://github.com/twbs/bootstrap.git#3.3.7maps@1.6.0 fetched in 254ms
 npm WARN deprecated graceful-fs@2.0.3: graceful-fs v3.0.0 and before will fail on node releases >= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use 'npm ls graceful-fs' to find it in the tree.
+bower jquery#1.9.1 - 3          cached https://github.com/jquery/jquery-dist.git#3.2.1d in 76ms
+bower jquery#1.9.1 - 3        validate 3.2.1 against https://github.com/jquery/jquery-dist.git#1.9.1 - 3
+bower angular-resource#^1.4.0  install angular-resource#1.6.4ifest for end-of-stream@1.0.0 fetched in 181ms
+bower angular-cookies#^1.4.0   install angular-cookies#1.6.4
+bower angular-animate#^1.4.0   install angular-animate#1.6.4
+bower angular#^1.4.0           install angular#1.6.4
+bower angular-sanitize#^1.4.0  install angular-sanitize#1.6.4
+bower angular-touch#^1.4.0     install angular-touch#1.6.4
+bower angular-route#^1.4.0     install angular-route#1.6.4
+bower angular-mocks#^1.4.0     install angular-mocks#1.6.4
+bower bootstrap#^3.2.0         install bootstrap#3.3.7
+bower jquery#1.9.1 - 3         install jquery#3.2.1
 npm WARN deprecated minimatch@1.0.0: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
-npm WARN deprecated node-uuid@1.4.8: Use uuid module instead
 npm WARN deprecated tough-cookie@0.12.1: ReDoS vulnerability parsing Set-Cookie https://nodesecurity.io/advisories/130
+npm WARN deprecated node-uuid@1.4.8: Use uuid module instead
+[ .................] | fetchMetadata: sill pacote range manifest for gulp-util@^3.0.1 fetched in 130ms
+angular-resource#1.6.4 bower_components/angular-resource
+└── angular#1.6.4
+
+angular-cookies#1.6.4 bower_components/angular-cookies
+└── angular#1.6.4
+
+angular-animate#1.6.4 bower_components/angular-animate
+└── angular#1.6.4
+
+angular#1.6.4 bower_components/angular
+
+angular-sanitize#1.6.4 bower_components/angular-sanitize
+└── angular#1.6.4
+
+angular-touch#1.6.4 bower_components/angular-touch
+└── angular#1.6.4
+
+angular-route#1.6.4 bower_components/angular-route
+└── angular#1.6.4
+
+angular-mocks#1.6.4 bower_components/angular-mocks
+└── angular#1.6.4
+
+bootstrap#3.3.7 bower_components/bootstrap
+└── jquery#3.2.1
+
+jquery#3.2.1 bower_components/jquery
 npm WARN deprecated npmconf@2.1.2: this package has been reintegrated into npm and is now out of date with respect to npm
 npm WARN prefer global jshint@2.8.0 should be installed with -g
 
-> optipng-bin@3.1.4 postinstall /home/jdlee/StkDog/node_modules/optipng-bin
+> optipng-bin@3.1.4 postinstall /home/jdlee/StockDog/node_modules/optipng-bin
 > node lib/install.js
 
   ✔ optipng pre-build test passed successfully
 
-> jpegtran-bin@3.2.0 postinstall /home/jdlee/StkDog/node_modules/jpegtran-bin
+> jpegtran-bin@3.2.0 postinstall /home/jdlee/StockDog/node_modules/jpegtran-bin
 > node lib/install.js
 
   ✔ jpegtran pre-build test passed successfully
 
-> gifsicle@3.0.4 postinstall /home/jdlee/StkDog/node_modules/gifsicle
+> gifsicle@3.0.4 postinstall /home/jdlee/StockDog/node_modules/gifsicle
 > node lib/install.js
 
   ✔ gifsicle pre-build test passed successfully
 npm notice created a lockfile as package-lock.json. You should commit this file.
-added 997 packages in 24.253s
+added 993 packages in 46.555s
+Running "wiredep:app" (wiredep) task
+
+Running "wiredep:test" (wiredep) task
+
+Done, without errors.
+
+
+Execution Time (2017-06-27 20:15:58 UTC+9)
+loading tasks          118ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 56%
+loading grunt-wiredep    5ms  ▇▇▇▇▇ 2%
+wiredep:app             81ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 38%
+wiredep:test             8ms  ▇▇▇▇▇▇▇ 4%
+Total 212ms
+
 ? Overwrite package.json? overwrite this and all others
     force     package.json
 
-> phantomjs-prebuilt@2.1.14 install /home/jdlee/StkDog/node_modules/phantomjs-prebuilt
+> phantomjs-prebuilt@2.1.14 install /home/jdlee/StockDog/node_modules/phantomjs-prebuilt
 > node install.js
 
 PhantomJS not found on PATH
-Download already available at /tmp/phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2
-Verified checksum of previously downloaded file
+Downloading https://github.com/Medium/phantomjs/releases/download/v2.1.1/phantomjs-2.1.1-linux-x86_64.tar.bz2
+Saving to /tmp/phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2
+Receiving...
+  [=======================================-] 97%
+Received 22866K total.
 Extracting tar contents (via spawned process)
-
-Removing /home/jdlee/StkDog/node_modules/phantomjs-prebuilt/lib/phantom
-Copying extracted folder /tmp/phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2-extract-1498465037090/phantomjs-2.1.1-linux-x86_64 -> /home/jdlee/StkDog/node_modules/phantomjs-prebuilt/lib/phantom
+Removing /home/jdlee/StockDog/node_modules/phantomjs-prebuilt/lib/phantom
+Copying extracted folder /tmp/phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2-extract-1498562217218/phantomjs-2.1.1-linux-x86_64 -> /home/jdlee/StockDog/node_modules/phantomjs-prebuilt/lib/phantom
 Writing location.js file
-Done. Phantomjs binary available at /home/jdlee/StkDog/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs
+Done. Phantomjs binary available at /home/jdlee/StockDog/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs
 
-> fsevents@1.1.2 install /home/jdlee/StkDog/node_modules/fsevents
+> fsevents@1.1.2 install /home/jdlee/StockDog/node_modules/fsevents
 > node install
 
++ karma-phantomjs-launcher@1.0.4
++ phantomjs-prebuilt@2.1.14
 + karma-jasmine@1.1.0
 + karma@1.7.0
 + jasmine-core@2.6.4
-+ karma-phantomjs-launcher@1.0.4
-+ phantomjs-prebuilt@2.1.14
-added 302 packages in 16.605s
+added 303 packages in 50.597s
 
-     _-----_     ╭───────────────────────╮
-    |       |    │      Bye from us!     │
-    |--(o)--|    │       Chat soon.      │
-   `---------´   │      Yeoman team      │
-    ( _´U`_ )    │    http://yeoman.io   │
-    /___A___\   /╰───────────────────────╯
-     |  ~  |     
-   __'.___.'__   
- ´   `  |° ´ Y ` 
 
-jdlee@LeeJD:~/StkDog$ 
+   ╭─────────────────────────────────────╮
+   │                                     │
+   │   Update available 5.0.3 → 5.0.4    │
+   │     Run npm i -g npm to update      │
+   │                                     │
+   ╰─────────────────────────────────────╯
+
+jdlee@LeeJD:~/StockDog$ 
 ```
 ## RUN using grunt serve comand and check in localhost:9000
 ```
