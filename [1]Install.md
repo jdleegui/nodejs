@@ -59,8 +59,9 @@ jdlee@LeeJD:~$ mkdir StkDog
 jdlee@LeeJD:~$ cd StkDog/
 ```
 ## Run yo and select 'Install a generator' and input 'angular'
-```
-jdlee@LeeJD:~/StkDog$ sudo yo 
+```diff
+-jdlee@LeeJD:~/StkDog$ sudo yo 
++jdlee@LeeJD:~/StkDog$ sudo yo angular StkDog
 ? 'Allo jdlee! What would you like to do? Angular
 
 Make sure you are in the directory you want to scaffold into.
