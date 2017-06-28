@@ -8,6 +8,7 @@ https://www.npmjs.com/package/angular
 https://nodejs.org/en/
 http://yeoman.io/learning/
 http://yeoman.io/codelab/setup.html
+https://github.com/swateek/angularjs
 ```
 ## Remove previously installed stuff
 ```
